@@ -10,10 +10,10 @@ terraform {
 }
 
 provider "aws" {
-    assume_role {
-      role_arn = "arn:aws:iam::385916149497:role/iac-test-spacelift"
-      session_name = "terraform"
-    }
+    # assume_role {
+    #   role_arn = "arn:aws:iam::385916149497:role/iac-test-spacelift"
+    #   session_name = "terraform"
+    # }
 
     region = "eu-west-2"
 
