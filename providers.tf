@@ -5,8 +5,6 @@ terraform {
             version = "~> 4.0"
         }
     }
-
-    //backend "s3" {}
 }
 
 provider "aws" {
@@ -16,4 +14,12 @@ provider "aws" {
         Environment = "Test"
         Owner = "Shahed"
     }
+}
+
+resource "aws_cloudwatch_log_group" "test-log-group" {
+  name = "test-log-group"
+
+  tags = {
+    Resource = "Test-LogGroup"
+  }
 }
